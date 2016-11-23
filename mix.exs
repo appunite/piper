@@ -18,8 +18,8 @@ defmodule Piper.Mixfile do
   end
 
   def package do
-    [name: project[:app],
-     files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+    [name: :piper,
+     files: ["lib", "mix.exs", "README*", "LICENSE*"],
      maintainers: ["Łukasz Niemier"],
      licenses: ["MIT"],
      links: %{"GitHub" => "https://github.com/hauleth/piper"}]
@@ -42,6 +42,7 @@ defmodule Piper.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-     [{:credo, "~> 0.4", only: [:dev, :test]}]
+     [{:ex_doc, ">= 0.0.0", only: :dev},
+      {:credo,  "~> 0.4",   only: :dev}]
   end
 end

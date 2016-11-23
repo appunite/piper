@@ -31,7 +31,8 @@ defmodule Piper do
     quote do
       @pipeline_pipes []
       unquote(block)
-      Module.put_attribute(__MODULE__, :pipelines, {unquote(name), @pipeline_pipes})
+      Module.put_attribute(__MODULE__, :pipelines,
+                           {unquote(name), @pipeline_pipes})
       @pipeline_pipes nil
     end
   end
