@@ -1,7 +1,7 @@
 defmodule Piper.Mixfile do
   use Mix.Project
 
-  @version "0.0.1"
+  @version "0.0.2"
   @description """
   Simple task router similar to Phoenix.Router and Plug
   """
@@ -22,7 +22,7 @@ defmodule Piper.Mixfile do
      files: ["lib", "mix.exs", "README*", "LICENSE*"],
      maintainers: ["Łukasz Niemier"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/hauleth/piper"}]
+     links: %{"GitHub" => "https://github.com/appunite/piper"}]
   end
 
   # Configuration for the OTP application
