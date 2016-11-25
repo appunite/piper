@@ -1,13 +1,14 @@
 defmodule Piper.Mixfile do
   use Mix.Project
 
-  @version "0.0.2"
+  @name :piper
+  @version "0.0.3"
   @description """
   Simple task router similar to Phoenix.Router and Plug
   """
 
   def project do
-    [app: :piper,
+    [app: @name,
      version: @version,
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
@@ -18,11 +19,12 @@ defmodule Piper.Mixfile do
   end
 
   def package do
-    [name: :piper,
+    [name: @name,
      files: ["lib", "mix.exs", "README*", "LICENSE*"],
-     maintainers: ["Łukasz Niemier"],
+     maintainers: ["AppUnite", "Łukasz Niemier"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/appunite/piper"}]
+     links: %{"GitHub" => "https://github.com/appunite/piper",
+              "Docs" => "https://hexdocs.pm/piper"}]
   end
 
   # Configuration for the OTP application
