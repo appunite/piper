@@ -21,7 +21,7 @@ defmodule Piper.Mixfile do
   def package do
     [name: @name,
      files: ["lib", "mix.exs", "README*", "LICENSE*"],
-     maintainers: ["AppUnite", "Łukasz Niemier"],
+     maintainers: ["AppUnite", "Łukasz Niemier", "Rafał Radziszewski"],
      licenses: ["MIT"],
      links: %{"GitHub" => "https://github.com/appunite/piper",
               "Docs" => "https://hexdocs.pm/piper"}]
