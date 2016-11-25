@@ -22,3 +22,11 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     end
     ```
 
+## Special thanks
+
+- Jose Valim ([@josevalim](https://github.com/josevalim))
+- Andrea Leopardi ([@whatyouhide](https://github.com/whatyouhide))
+- Sonny Scroggin ([@scrogson](https://github.com/scrogson))
+- Gabriel Jaldon ([@gjaldon](https://github.com/gjaldon))
+- and other contributors to [elixir-lang/plug](https://github.com/elixir-lang/plug)
+  for your work on Plug which allowed us to create this library.
