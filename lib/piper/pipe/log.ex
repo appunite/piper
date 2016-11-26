@@ -6,16 +6,18 @@ defmodule Piper.Pipe.Log do
 
   ## Options
 
-  - `level` - debug level, defaults to `:debug`
+  - `level` - method to be called on `logger` module, defaults to `:debug`
   """
 
   require Logger
 
-  def init(opts), do: opts
+  def init(opts) do
+    Keyword.merge([level: :debug, func: &inspect/1], opts)
+  end
 
-  def call(data, opts) do
-    level = opts[:level] || :debug
+  def call(data, [level: level, func: f]) do
+    :ok = Logger.log(level, f.(data))
 
-    apply(Logger, level, [inspect(data)])
+    data
   end
 end
