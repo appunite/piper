@@ -7,6 +7,10 @@ defmodule Piper.Data do
             data: %{},
             halted: false
 
+  def set(%Data{} = data, value) do
+    %{data | data: value}
+  end
+
   def assign(%Data{assigns: assigns} = data, key, value) do
     %{data | assigns: Map.put(assigns, key, value)}
   end
