@@ -15,7 +15,9 @@ defmodule Piper.Mixfile do
      start_permanent: Mix.env == :prod,
      package: package(),
      description: @description,
-     deps: deps()]
+     deps: deps(),
+     docs: [main: "readme",
+            extras: ["README.md"]]]
   end
 
   def package do
