@@ -68,6 +68,7 @@ end
 
 ## Special thanks
 
+- For initial idea Rafał Radziszewski ([@rafal-radziszewski](https://github.com/rafal-radziszewski))
 - Jose Valim ([@josevalim](https://github.com/josevalim))
 - Andrea Leopardi ([@whatyouhide](https://github.com/whatyouhide))
 - Sonny Scroggin ([@scrogson](https://github.com/scrogson))
