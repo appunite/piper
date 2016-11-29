@@ -1,0 +1,5 @@
+language: elixir
+sudo: false
+script:
+  - mix test
+  - mix credo
