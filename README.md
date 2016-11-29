@@ -1,6 +1,6 @@
 # Piper
 
-**TODO: Add description**
+Plug-like data processing library.
 
 ## Installation
 
@@ -21,6 +21,50 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
       [applications: [:piper]]
     end
     ```
+
+## Usage
+
+Piper pipeline can be built using either functions or modules. This way you can
+provide deencapsulation and processing data in pipeline-like way. Example:
+
+```elixir
+defmodule FetchFromRepoPipe do
+  alias MyApp.Repo
+
+  def init(opts), do: opts
+
+  def call(%Piper.Data{data: %{"id" => id}}, _opts) do
+    data
+    |> assign(:user, Repo.get(User, id))
+  end
+end
+
+defmodule UpdatePassword do
+  use Piper.Builder
+
+  alias MyApp.Repo
+
+  pipe FetchFromRepoPipe
+  pipe :encrypt, module: Comeoin.Bcrypt
+  pipe :set
+  pipe :save
+
+  def encrypt(%{data: %{"password" => password}} = data, [module: module]) do
+    data
+    |> assign(:password, module.hashpw(password))
+  end
+
+  def set(%{assigns: %{user: user, password: password}} = data, _opts) do
+    data
+    |> assign(:user, %{user | password: password})
+  end
+
+  def save(%{assigns: %{user: user}} = data, _opts) do
+    data
+    |> assign(:user, Repo.update(user))
+  end
+end
+```
 
 ## Special thanks
 
