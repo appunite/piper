@@ -4,11 +4,12 @@ defmodule Piper.Data do
   alias Piper.Data
 
   defstruct assigns: %{},
+            result: nil,
             data: %{},
             halted: false
 
   def set(%Data{} = data, value) do
-    %{data | data: value}
+    %{data | result: value}
   end
 
   def assign(%Data{assigns: assigns} = data, key, value) do
