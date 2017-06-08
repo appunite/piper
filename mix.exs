@@ -33,7 +33,7 @@ defmodule Piper.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger], mod: {Piper, []}]
+    [applications: [:logger]]
   end
 
   # Dependencies can be Hex packages:
