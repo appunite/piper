@@ -2,7 +2,7 @@ defmodule Piper.Mixfile do
   use Mix.Project
 
   @name :piper
-  @version "0.0.3"
+  @version "0.0.4"
   @description """
   Simple task router similar to Phoenix.Router and Plug
   """
