@@ -3,7 +3,6 @@ defmodule Piper do
 
   require Piper.Data
 
-  use Behaviour
   use Application
 
   @moduledoc """
@@ -31,11 +30,6 @@ defmodule Piper do
   module (this module).
   """
 
-  defcallback init(opts) :: opts
-  defcallback call(Piper.Data.t, opts) :: Piper.Data.t
-
-  @doc false
-  def start(_type, _args) do
-    Piper.Supervisor.start_link()
-  end
+  @callback init(opts) :: opts
+  @callback call(Piper.Data.t, opts) :: Piper.Data.t
 end

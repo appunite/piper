@@ -4,6 +4,7 @@ defmodule Piper.Data do
   alias Piper.Data
 
   defstruct assigns: %{},
+            key: nil,
             result: nil,
             data: %{},
             halted: false
