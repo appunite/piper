@@ -29,7 +29,8 @@ provide deencapsulation and processing data in pipeline-like way. Example:
 
 ```elixir
 defmodule FetchFromRepoPipe do
-  alias MyApp.Repo
+ import Piper.Data
+ alias MyApp.Repo
 
   def init(opts), do: opts
 
