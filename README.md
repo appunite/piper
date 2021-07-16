@@ -8,19 +8,19 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
   1. Add `piper` to your list of dependencies in `mix.exs`:
 
-    ```elixir
-    def deps do
-      [{:piper, "~> 0.0.4"}]
-    end
-    ```
+  ```elixir
+  def deps do
+    [{:piper, "~> 0.0.4"}]
+  end
+  ```
 
   2. Ensure `piper` is started before your application:
 
-    ```elixir
-    def application do
-      [applications: [:piper]]
-    end
-    ```
+  ```elixir
+  def application do
+    [applications: [:piper]]
+  end
+  ```
 
 ## Usage
 
